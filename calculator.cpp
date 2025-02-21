@@ -71,8 +71,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 			GetWindowTextA(n1, r1, sizeof(r1));
             GetWindowTextA(n2, r2, sizeof(r2));
 
-			num1 = atoi(r1);
-            num2 = atoi(r2);
+			num1 = atof(r1);
+            num2 = atof(r2);
 			
 			switch (LOWORD(wParam)) {
                 case 1:  
