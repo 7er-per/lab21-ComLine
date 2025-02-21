@@ -9,7 +9,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 	switch(Message) {
 
 		case WM_CREATE:{
-			textfi = CreateWindowA("STATIC","Please input two number",
+			textfi = CreateWindowA("STATIC","Please input two numbers",
 									WS_VISIBLE | WS_CHILD | WS_BORDER ,
 									25, // x
 									20, // y
