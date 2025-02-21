@@ -65,14 +65,14 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 		}
 
 		case WM_COMMAND:{
-			char buffer1[10], buffer2[10] , resultText[50];
+			char r1[30], r2[30] , resultText[50];
             float num1, num2, result;
 
-			GetWindowTextA(n1, buffer1, sizeof(buffer1));
-            GetWindowTextA(n2, buffer2, sizeof(buffer2));
+			GetWindowTextA(n1, r1, sizeof(r1));
+            GetWindowTextA(n2, r2, sizeof(r2));
 
-			num1 = atoi(buffer1);
-            num2 = atoi(buffer2);
+			num1 = atoi(r1);
+            num2 = atoi(r2);
 			
 			switch (LOWORD(wParam)) {
                 case 1:  
@@ -145,7 +145,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return 0;
 	}
 
-	hwnd = CreateWindowEx(WS_EX_CLIENTEDGE,"WindowClass","My Calculator",WS_VISIBLE|WS_OVERLAPPEDWINDOW,
+	hwnd = CreateWindowEx(WS_EX_CLIENTEDGE,"WindowClass","My Calculator",
+		WS_VISIBLE | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU,
 		CW_USEDEFAULT, /* x */
 		CW_USEDEFAULT, /* y */
 		250, /* width */
